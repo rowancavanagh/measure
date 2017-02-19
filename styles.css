@@ -1,0 +1,58 @@
+/* Rowan Cavanagh */
+/* Measure */
+
+#measure-counter-extension {
+  box-sizing: border-box;
+  display: block;
+  position: absolute;
+  min-width: 98px;
+  padding: 8px 14px 9px;
+  background: linear-gradient(to bottom, #333, #111);
+  border-radius: 4px;
+  font: 18px Helvetica Neue, sans-serif;
+  color: white;
+  margin-top: 8px;
+  opacity: 0;
+  text-align: center;
+  transition: opacity 100ms ease-in, margin-top 100ms ease-in;
+  -webkit-user-select: none;
+  user-select: none;
+  z-index: 1000;
+}
+
+#measure-counter-extension::after {
+  display: block;
+  content: '';
+  position: absolute;
+  bottom: -8px;
+  left: 50%;
+  margin-left: -6px;
+	border-left: 6px solid transparent;
+	border-right: 6px solid transparent;
+	border-top: 8px solid #111;
+}
+
+.measure-counter-extension__on {
+  opacity: 1 !important;
+  margin-top: 0px !important;
+}
+
+.measure-counter-extension__underneath::after {
+  bottom: auto !important;
+  top: -10px;
+	border-top: none !important;
+	border-bottom: 10px solid #333;
+}
+
+#measure-counter-extension__count {
+  display: block;
+  margin-bottom: 4px;
+}
+
+#measure-counter-extension__title {
+  display: block;
+  font-size: 10px;
+  font-style: normal;
+  font-weight: 700;
+  text-transform: uppercase;
+}
