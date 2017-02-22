@@ -3,6 +3,7 @@
 // Held together with string and paperclips.
 
 var prepare = true;
+var competingTooltip = document.querySelector(".highlightMenu, #highlight_create_popover");
 
 // Measuring
 function measure() {
@@ -29,7 +30,7 @@ function measure() {
     top = top + window.scrollY;
     bottom = bottom + window.scrollY;
     measureCounter.style.left = (left+((right-left)/2)-49) + 'px';
-    if (bounding.top < 65) {
+    if (bounding.top < 65 || competingTooltip) {
       measureCounter.style.top = (bottom+10) + 'px';
       measureCounter.classList.add('measure-counter-extension__underneath');
     }

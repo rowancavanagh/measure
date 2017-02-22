@@ -14,6 +14,7 @@ chrome.browserAction.onClicked.addListener(function(tab) {
     chrome.tabs.insertCSS({file: "styles.css"});
     chrome.tabs.query({active: true, currentWindow: true}, function(tabs) {
       tabId = tabs[0].id;
+      chrome.tabs.sendMessage(tabId, {"whatToDo": "on"});
       console.log("Measure is on tab number: " + tabId);
     });
   }

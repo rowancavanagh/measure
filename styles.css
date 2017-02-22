@@ -7,9 +7,9 @@
   position: absolute;
   min-width: 98px;
   padding: 8px 14px 9px;
-  background: linear-gradient(to bottom, #333, #111);
+  background: linear-gradient(to bottom, #2f2f2f, #151515);
   border-radius: 4px;
-  font: 18px Helvetica Neue, sans-serif;
+  font: 18px 'Helvetica Neue', Helvetica, Arial, sans-serif;
   color: white;
   margin-top: 8px;
   opacity: 0;
@@ -27,9 +27,9 @@
   bottom: -8px;
   left: 50%;
   margin-left: -6px;
-	border-left: 6px solid transparent;
-	border-right: 6px solid transparent;
-	border-top: 8px solid #111;
+  border-left: 6px solid transparent;
+  border-right: 6px solid transparent;
+  border-top: 8px solid #151515;
 }
 
 .measure-counter-extension__on {
@@ -40,8 +40,8 @@
 .measure-counter-extension__underneath::after {
   bottom: auto !important;
   top: -10px;
-	border-top: none !important;
-	border-bottom: 10px solid #333;
+  border-top: none !important;
+  border-bottom: 10px solid #2f2f2f;
 }
 
 #measure-counter-extension__count {
