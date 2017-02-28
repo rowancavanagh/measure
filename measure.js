@@ -3,7 +3,7 @@
 // Held together with string and paperclips.
 
 var prepare = true;
-var competingTooltip = document.querySelector(".highlightMenu, #highlight_create_popover");
+var competingTooltip = document.querySelector(".fb-quote, .highlightMenu, #highlight_create_popover"); // Tooltips from Facebook, The Guardian, Instapaper
 
 // Measuring
 function measure() {
@@ -38,6 +38,9 @@ function measure() {
       measureCounter.style.top = (top-65) + 'px';
       measureCounter.classList.remove('measure-counter-extension__underneath');
     };
+    
+    chrome.runtime.sendMessage({"whatToDo": "measured"});
+
     strRange.detach();
   }
   else {
