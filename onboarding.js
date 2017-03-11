@@ -2,17 +2,19 @@
 // Measure
 // Onboarding page scripting
 
-//chrome.runtime.sendMessage({"whatToDo": "off"}); // Seems to be stopping it completely
-
 var openButton = document.querySelector(".open");
 var closeButton = document.querySelector(".close");
 var dialogOne = document.querySelector(".dialog-one");
 var dialogTwo = document.querySelector(".dialog-two");
+var testMeasureDone = false;
 
 // Open onboarding
 openButton.addEventListener('click', openOnboarding, false);
 
-function openOnboarding(e) {
+function openOnboarding(hiya) {
+    var backgroundConnect = chrome.runtime.connect();
+    backgroundConnect.postMessage({onboarding: "yup"});
+
     // Dialog one close
     dialogOne.classList.add("dialog-one-hide");
     dialogOne.addEventListener("animationend", function(){
@@ -26,17 +28,17 @@ function openOnboarding(e) {
         dialogOne.removeEventListener("animationend", arguments.callee, false);
     }, false);
 
-    e.preventDefault();
+    hiya.preventDefault();
 };
 
 // Close
 closeButton.addEventListener('click', closeTab, false);
 
-function closeTab(e) {
+function closeTab(boop) {
     chrome.tabs.getCurrent(function(tab) {
         chrome.tabs.remove(tab.id, function() { });
     });
-    e.preventDefault();
+    boop.preventDefault();
 };
 
 // Test Measure
@@ -44,7 +46,7 @@ function testMeasure() {
     chrome.runtime.onMessage.addListener(function(message, sender, sendResponse){
         var whatToDo = message.whatToDo;
         var section = document.querySelector("#instruction");
-        if (whatToDo == "on") {
+        if (whatToDo == "on" && !testMeasureDone) {
             dialogTwo.innerHTML = '<p>Now highlight some text</p>';
             dialogTwo.classList.remove("arrow-top");
             dialogTwo.classList.add("arrow-left");
@@ -56,6 +58,7 @@ function testMeasure() {
                 section.style.pointerEvents = "none";
                 section.removeEventListener("animationend", arguments.callee, false);
             }, false);
+            testMeasureDone = !testMeasureDone;
         }
 
         // Measured
