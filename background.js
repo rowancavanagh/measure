@@ -24,6 +24,7 @@ chrome.browserAction.onClicked.addListener(function(tab) {
         link.setAttribute("rel", "stylesheet");
         howManyWindows.document.body.appendChild(link);
       };
+      onboarding = !onboarding;
     }
     else {
       chrome.tabs.executeScript({file: "measure.js"});
@@ -46,14 +47,7 @@ chrome.browserAction.onClicked.addListener(function(tab) {
   }
 });
 
-chrome.tabs.onRemoved.addListener(function(){
-  if(toggle){
-    chrome.browserAction.setIcon({path:{"16": "icons/icon16.png", "19": "icons/icon19.png", "32": "icons/icon32.png", "38": "icons/icon38.png"}});
-    tabId = "";
-    toggle = false;
-  };
-});
-
+// On zoom
 chrome.tabs.onZoomChange.addListener(function(){
   if(toggle){
     chrome.tabs.query({active: true, currentWindow: true}, function(tabs) {
@@ -62,12 +56,41 @@ chrome.tabs.onZoomChange.addListener(function(){
   };
 });
 
-chrome.tabs.onActivated.addListener(function(){
+// On close
+chrome.tabs.onRemoved.addListener(function(){
+  if(toggle){
+    chrome.browserAction.setIcon({path:{"16": "icons/icon16.png", "19": "icons/icon19.png", "32": "icons/icon32.png", "38": "icons/icon38.png"}});
+    tabId = "";
+    toggle = false;
+  };
+});
+
+// On switch
+chrome.tabs.onActivated.addListener(function(info){
   if(toggle){
     var tabIdInt = Number(tabId);
-    chrome.tabs.query({active: true, currentWindow: true}, function(tabs) {
+    chrome.tabs.query({active: true, currentWindow: true}, function() {
       chrome.tabs.sendMessage(tabIdInt, {"whatToDo": "off"});
     });
+    chrome.browserAction.setIcon({path:{"16": "icons/icon16.png", "19": "icons/icon19.png", "32": "icons/icon32.png", "38": "icons/icon38.png"}});
+    tabId = "";
+    toggle = false;
+  };
+});
+
+// On refresh
+chrome.tabs.onUpdated.addListener(function(){
+  if(toggle){
+    chrome.browserAction.setIcon({path:{"16": "icons/icon16.png", "19": "icons/icon19.png", "32": "icons/icon32.png", "38": "icons/icon38.png"}});
+    tabId = "";
+    toggle = false;
+  };
+});
+
+// On window change
+chrome.windows.onFocusChanged.addListener(function(){
+  if(toggle){
+    console.log("Focus changed");
     chrome.browserAction.setIcon({path:{"16": "icons/icon16.png", "19": "icons/icon19.png", "32": "icons/icon32.png", "38": "icons/icon38.png"}});
     tabId = "";
     toggle = false;
