@@ -15,6 +15,7 @@
   opacity: 0;
   text-align: center;
   transition: opacity 100ms ease-in, margin-top 100ms ease-in;
+  transform: none;
   -webkit-user-select: none;
   user-select: none;
   z-index: 1000;

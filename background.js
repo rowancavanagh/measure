@@ -14,7 +14,6 @@ chrome.browserAction.onClicked.addListener(function(tab) {
     if(onboarding){
       var windows = chrome.extension.getViews({type: "tab"});
       for (var howManyWindows of windows) {
-        console.log("Onboarding!");
         var script = howManyWindows.document.createElement('script');
         script.setAttribute("src", "measure.js");
         script.setAttribute("async", "");
@@ -90,7 +89,6 @@ chrome.tabs.onUpdated.addListener(function(){
 // On window change
 chrome.windows.onFocusChanged.addListener(function(){
   if(toggle){
-    console.log("Focus changed");
     chrome.browserAction.setIcon({path:{"16": "icons/icon16.png", "19": "icons/icon19.png", "32": "icons/icon32.png", "38": "icons/icon38.png"}});
     tabId = "";
     toggle = false;
