@@ -4,8 +4,8 @@
 {
   "manifest_version": 2,
   "name": "Measure",
-  "description": "Measuring typographic line lengths without leaving the page!",
-  "version": "0.1",
+  "description": "Measure typographic line lengths right from the page",
+  "version": "1.0.0",
   "author" : "Rowan Cavanagh",
   "icons": {
     "16": "icons/icon16.png",

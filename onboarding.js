@@ -47,7 +47,7 @@ function testMeasure() {
         var whatToDo = message.whatToDo;
         var section = document.querySelector("#instruction");
         if (whatToDo == "on" && !testMeasureDone) {
-            dialogTwo.innerHTML = '<p>Now highlight some text</p>';
+            dialogTwo.innerHTML = '<p>Now highlight a line of text</p>';
             dialogTwo.classList.remove("arrow-top");
             dialogTwo.classList.add("arrow-left");
             dialogTwo.classList.add("bounce");
@@ -63,7 +63,7 @@ function testMeasure() {
 
         // Measured
         else if (whatToDo == "measured") {
-            dialogTwo.innerHTML = '<p>Yay. Now, go forth and Measure!</p><a href class="close-harder">Fine</a>';
+            dialogTwo.innerHTML = '<p>All done. How easy was that?</p><a href class="close-harder close">Go forth and Measure</a>';
             dialogTwo.classList.remove("arrow-left");
             dialogTwo.style.pointerEvents = "initial";
             var closeButtonCloseHarder = document.querySelector(".close-harder");
