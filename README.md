@@ -1,7 +1,7 @@
 # Measure
-A Chrome extension measuring typographic line lengths right from the page.
+## [Available to download from the Chrome web store.](https://chrome.google.com/webstore/detail/measure/bbompmbliibpeaaloikpoahdokhjdmeg)
 
-[Available to download from the Chrome web store.](https://chrome.google.com/webstore/detail/measure/bbompmbliibpeaaloikpoahdokhjdmeg)
+A Chrome extension measuring typographic line lengths right from the page.
 
 The "measure" is the width of a body of type. This little tool helps you find it with a simple click in the toolbar and highlight of a line of text.
 
