@@ -1,11 +1,8 @@
-// Rowan Cavanagh
-// Measure
-
 {
   "manifest_version": 2,
   "name": "Measure",
   "description": "Measure typographic line lengths right from the page",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "author" : "Rowan Cavanagh",
   "icons": {
     "16": "icons/icon16.png",

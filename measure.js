@@ -24,8 +24,24 @@ function measure() {
     };
     measureCounter.setAttribute('class', 'measure-counter-extension__on');
     
-    var range = window.getSelection().getRangeAt(0);
-    var bounding = range.getBoundingClientRect();
+    var range = str.getRangeAt(0);    
+    var rangeContainer = range.commonAncestorContainer;
+    var rangeContainerChildren = rangeContainer.childNodes;
+    var rangeContainerChildrenLength = rangeContainerChildren.length;
+    var rangeContainerNames = [];
+    for (var i = 0; i < rangeContainerChildrenLength; i++) {
+      var rangeContainerChildrenName = rangeContainerChildren[i].nodeName;
+      rangeContainerNames.push(rangeContainerChildrenName);
+      console.log(rangeContainerNames);
+    }
+    if (rangeContainerNames.includes("INPUT") || rangeContainerNames.includes("TEXTAREA")) {
+      var bounding = rangeContainer.getBoundingClientRect();
+      console.log(bounding);
+    }
+    else {
+      var bounding = range.getBoundingClientRect();
+    };
+    
     var left = bounding.left, right = bounding.right, top = bounding.top, bottom = bounding.bottom;
     top = top + window.scrollY;
     bottom = bottom + window.scrollY;
