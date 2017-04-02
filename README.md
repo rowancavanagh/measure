@@ -1,12 +1,10 @@
 # Measure
 
-Measure makes it easy to be more precise when creating for the web.
+A Chrome extension measuring typographic line lengths right from the page. Measure makes it easy to be more precise when creating for the web.
 
 ### [Available to download from the Chrome web store.](https://chrome.google.com/webstore/detail/measure/bbompmbliibpeaaloikpoahdokhjdmeg)
 
 <img src="/images%20for%20chrome%20web%20store/measure-video.gif" alt="Measure in action" width="400" height="300" />
-
-A Chrome extension measuring typographic line lengths right from the page.
 
 The "measure" is the width of a body of type. This little tool helps you find it with a simple click in the toolbar and highlight of a line of text.
 
