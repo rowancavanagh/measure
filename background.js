@@ -28,7 +28,6 @@ chrome.browserAction.onClicked.addListener(function(tab) {
     else {
       chrome.tabs.executeScript({file: "measure.js"});
       chrome.tabs.insertCSS({file: "styles.css"});
-      //chrome.tabs.executeScript({file: "lineWrapDetector.js"}); Words per line coming in future release
     };
 
     chrome.tabs.query({active: true, currentWindow: true}, function(tabs) {

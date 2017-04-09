@@ -11,10 +11,6 @@ function measure() {
   var str = window.getSelection();
   var selection = str.toString();
   if (selection != "") {
-    var strRange = str.getRangeAt(0);
-    var strRangeDocFrag = strRange.cloneContents();
-    var strRangeToString = strRange.toString();
-
     measureCounterCount.innerHTML = selection.length;
     if (selection.length == 1) {
       measureCounterTitle.innerHTML = "Character";
@@ -24,7 +20,7 @@ function measure() {
     };
     measureCounter.setAttribute('class', 'measure-counter-extension__on');
     
-    var range = str.getRangeAt(0);    
+    var range = str.getRangeAt(0);
     var rangeContainer = range.commonAncestorContainer;
     var rangeContainerChildren = rangeContainer.childNodes;
     var rangeContainerChildrenLength = rangeContainerChildren.length;
@@ -32,11 +28,9 @@ function measure() {
     for (var i = 0; i < rangeContainerChildrenLength; i++) {
       var rangeContainerChildrenName = rangeContainerChildren[i].nodeName;
       rangeContainerNames.push(rangeContainerChildrenName);
-      console.log(rangeContainerNames);
     }
     if (rangeContainerNames.includes("INPUT") || rangeContainerNames.includes("TEXTAREA")) {
       var bounding = rangeContainer.getBoundingClientRect();
-      console.log(bounding);
     }
     else {
       var bounding = range.getBoundingClientRect();
@@ -57,7 +51,7 @@ function measure() {
     
     chrome.runtime.sendMessage({"whatToDo": "measured"});
 
-    strRange.detach();
+    range.detach();
   }
   else {
     measureCounter.classList.remove('measure-counter-extension__on');

@@ -14,6 +14,7 @@ openButton.addEventListener('click', openOnboarding, false);
 function openOnboarding(hiya) {
     var backgroundConnect = chrome.runtime.connect();
     backgroundConnect.postMessage({onboarding: "yup"});
+    console.log("Opening");
 
     // Dialog one close
     dialogOne.classList.add("dialog-one-hide");
