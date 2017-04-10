@@ -1,0 +1,22 @@
+{
+  "name": {
+      "message": "Measure"
+  },
+  "description": {
+      "message": "Measure typographic line lengths right from the page"
+  },
+  "description_screenshot2": {
+      "message": "Design more readable content"
+  },
+  "description_screenshot3": {
+      "message": "Learn from the best"
+  },
+  "characters": {
+      "message": "Characters",
+      "description": "A label underneath a numeric character count, telling the user how many characters (letters, numbers and symbols) have been selected"
+  },
+  "character": {
+      "message": "Character",
+      "description": "The same label as above, but in singular form"
+  }
+}

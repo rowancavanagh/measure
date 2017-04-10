@@ -13,10 +13,10 @@ function measure() {
   if (selection != "") {
     measureCounterCount.innerHTML = selection.length;
     if (selection.length == 1) {
-      measureCounterTitle.innerHTML = "Character";
+      measureCounterTitle.innerHTML = chrome.i18n.getMessage("character");
     }
     else {
-      measureCounterTitle.innerHTML = "Characters";
+      measureCounterTitle.innerHTML = chrome.i18n.getMessage("characters");
     };
     measureCounter.setAttribute('class', 'measure-counter-extension__on');
     
