@@ -7,10 +7,10 @@ var competingTooltip = document.querySelector(".fb-quote, .highlightMenu, #highl
 
 // Measuring
 function measure() {
-  console.log('Measure!');
   var str = window.getSelection();
   var selection = str.toString();
   if (selection != "") {
+    console.log('Measure!');
     measureCounterCount.innerHTML = selection.length;
     if (selection.length == 1) {
       measureCounterTitle.innerHTML = chrome.i18n.getMessage("character");
@@ -65,10 +65,11 @@ if (prepare == true) {
   var measureCounter = document.createElement('div');
   if (yn == null) {
     measureCounter.setAttribute('id', 'measure-counter-extension');
-    measureCounter.innerHTML = '<span id="measure-counter-extension__count">0</span><span id="measure-counter-extension__title">Characters</span>';
+    measureCounter.innerHTML = '<span id="measure-counter-extension__count">0</span><span id="measure-counter-extension__title"></span>';
     document.body.appendChild(measureCounter);
     var measureCounterCount = document.getElementById('measure-counter-extension__count');
     var measureCounterTitle = document.getElementById('measure-counter-extension__title');
+    measureCounterTitle.innerHTML = chrome.i18n.getMessage("characters");
   };
   
   document.addEventListener('mouseup', measure, false);
@@ -76,7 +77,7 @@ if (prepare == true) {
   window.addEventListener('resize', measure, false);
 
   // BackgroundJS is talking to you
-  chrome.runtime.onMessage.addListener(function(message, sender, sendResponse){
+  chrome.runtime.onMessage.addListener(function(message){
     var whatToDo = message.whatToDo;
 
     if (whatToDo == "off") {

@@ -5,6 +5,7 @@
 var toggle = false;
 var onboarding = false;
 var tabId = "";
+var locale = chrome.i18n.getMessage("locale");
 
 chrome.browserAction.onClicked.addListener(function(tab) {
   toggle = !toggle;
@@ -22,17 +23,25 @@ chrome.browserAction.onClicked.addListener(function(tab) {
         link.setAttribute("href", "styles.css");
         link.setAttribute("rel", "stylesheet");
         howManyWindows.document.body.appendChild(link);
+        if (locale == "zh") {
+          var linkChinese = howManyWindows.document.createElement('link');
+          linkChinese.setAttribute("href", "styles-zh.css");
+          linkChinese.setAttribute("rel", "stylesheet");
+          howManyWindows.document.body.appendChild(linkChinese);
+        };
       };
       onboarding = !onboarding;
     }
     else {
       chrome.tabs.executeScript({file: "measure.js"});
       chrome.tabs.insertCSS({file: "styles.css"});
+      if (locale == "zh") {
+        chrome.tabs.insertCSS({file: "styles-zh.css"});
+      };
     };
 
     chrome.tabs.query({active: true, currentWindow: true}, function(tabs) {
-      tabId = tabs[0].id;
-      chrome.tabs.sendMessage(tabId, {"whatToDo": "on"});
+      chrome.tabs.sendMessage(tabs[0].id, {"whatToDo": "on"});
       console.log("Measure is on tab number: " + tabId);
     });
   }
@@ -101,6 +110,7 @@ chrome.runtime.onInstalled.addListener(function(details){
   };
 });
 
+// Talking to onboarding
 function onboardingConnected(port) {
   port.onMessage.addListener(function(message) {
     if(message.onboarding == "yup"){
@@ -110,3 +120,13 @@ function onboardingConnected(port) {
 }
 
 chrome.runtime.onConnect.addListener(onboardingConnected);
+
+// Onboarding round-the-houses
+chrome.runtime.onMessage.addListener(function(message){
+    var whatToDo = message.whatToDo;
+    if (whatToDo == "measured") {
+      chrome.tabs.query({active: true, currentWindow: true}, function(tabs) {
+        chrome.tabs.sendMessage(tabs[0].id, {"whatToDo": "measured"});
+      });
+    };
+});

@@ -3,7 +3,7 @@
   "name": "__MSG_name__",
   "description": "__MSG_description__",
   "default_locale": "en",
-  "version": "1.0.1",
+  "version": "1.1.0",
   "author" : "Rowan Cavanagh",
   "icons": {
     "16": "icons/icon16.png",
@@ -18,7 +18,7 @@
       "32": "icons/icon32.png",
       "38": "icons/icon38.png"
     },
-    "default_title": "Measure"
+    "default_title": "__MSG_name__"
   },
   
   "background": {
