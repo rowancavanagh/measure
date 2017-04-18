@@ -1,0 +1,63 @@
+{
+  "locale": {
+      "message": "de",
+      "description": "The locale this file is targeting"
+  },
+  "name": {
+      "message": "Satzbreite",
+      "description": "Equivalent word of measure/line length in German"
+  },
+  "description": {
+      "message": "Measure typographic line lengths right from the page"
+  },
+  "description_screenshot2": {
+      "message": "Design more readable content"
+  },
+  "description_screenshot3": {
+      "message": "Learn from the best"
+  },
+  "characters": {
+      "message": "Zeichen",
+      "description": "A label underneath a numeric character count, telling the user how many characters (letters, numbers and symbols) have been selected"
+  },
+  "character": {
+      "message": "Zeichen",
+      "description": "The same label as above, as plural in some languages"
+  },
+  "onboarding_title": {
+      "message": "Satzbreite—Sich aufmachen",
+      "description": "The title for the onboarding page that opens when the user first uses Measure"
+  },
+  "onboarding_d1_paragraph": {
+      "message": "Get started with Measure in this test drive example",
+      "description": "A welcome message presented on the onboarding page, telling the user that they will be shown how to use Measure here"
+  },
+  "onboarding_d1_open": {
+      "message": "Yes, test away!",
+      "description": "Casually-phrased button text to open the onboarding page and test Measure"
+  },
+  "onboarding_d1_close": {
+      "message": "Close",
+      "description": "More formally-written button text for the user to close the page, instead of testing the extension"
+  },
+  "onboarding_d2_step1": {
+      "message": "Press the Measure extension icon in the toolbar to begin",
+      "description": "The first instruction shown to the user on how to use Measure, they're told to click the Measure icon in the toolbar where extensions are shown"
+  },
+  "onboarding_d2_step2": {
+      "message": "Now highlight a line of text",
+      "description": "The second instruction shown to the user, letting them know they need to select a line of text in the article on the page"
+  },
+  "onboarding_d2_step3": {
+      "message": "All done. How easy was that?",
+      "description": "A success message saying that the user has now successfully used Measure"
+  },
+  "onboarding_d2_step3_button": {
+      "message": "Go forth and Measure",
+      "description": "Button text letting the user know that they're done with this onboarding, and can go and use Measure elsewhere. This sentence works well in English where measure can be used as a verb and noun—this might need to be done differently in this language."
+  },
+  "onboarding_article": {
+      "message": "<p>Hinunter, hinunter, hinunter! Wollte denn der Fall nie endigen? »Wie viele Meilen ich wohl jetzt gefallen bin!« sagte sie laut. »Ich muß ungefähr am Mittelpunkt der Erde sein. Laß sehen: das wären achthundert und funfzig Meilen, glaube ich—« (denn ihr müßt wissen, Alice hatte dergleichen in der Schule gelernt, und obgleich dies keine sehr gute Gelegenheit war, ihre Kenntnisse zu zeigen, da Niemand zum Zuhören da war, so übte sie es sich doch dabei ein)—»ja, das ist ungefähr die Entfernung; aber zu welchem Länge- und Breitegrade ich wohl gekommen sein mag?« (Alice hatte nicht den geringsten Begriff, was weder Längegrad noch Breitegrad war; doch klangen ihr die Worte großartig und nett zu sagen.)</p><p>Bald fing sie wieder an. »Ob ich wohl ganz durch die Erde fallen werde! Wie komisch das sein wird, bei den Leuten heraus zu kommen, die auf dem Kopfe gehen! die Antipathien, glaube ich.« (Diesmal war es ihr ganz lieb, daß Niemand zuhörte, denn das Wort klang ihr gar nicht recht.) »Aber natürlich werde ich sie fragen müssen, wie das Land heißt. Bitte, liebe Dame, ist dies Neu-Seeland oder Australien?« (Und sie versuchte dabei zu knixen,—denkt doch, knixen, wenn man durch die Luft fällt! Könntet ihr das fertig kriegen?) »Aber sie werden mich für ein unwissendes kleines Mädchen halten, wenn ich frage! Nein, es geht nicht an zu fragen; vielleicht sehe ich es irgendwo angeschrieben.«</p>",
+      "description": "An excerpt of Alice's Adventures in Wonderland, used as content for the onboarding page, for the user to test Measure on. Includes HTML tags to format in place."
+  }
+}

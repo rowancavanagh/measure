@@ -1,0 +1,63 @@
+{
+  "locale": {
+      "message": "zh",
+      "description": "The locale this file is targeting"
+  },
+  "name": {
+      "message": "行长",
+      "description": "Equivalent word of measure/line length in Standard Chinese—to my understanding"
+  },
+  "description": {
+      "message": "Measure typographic line lengths right from the page"
+  },
+  "description_screenshot2": {
+      "message": "Design more readable content"
+  },
+  "description_screenshot3": {
+      "message": "Learn from the best"
+  },
+  "characters": {
+      "message": "字",
+      "description": "A label underneath a numeric character count, telling the user how many characters (letters, numbers and symbols) have been selected"
+  },
+  "character": {
+      "message": "字",
+      "description": "The same label as above, as plural in some languages. Unsure if there's a different word for this?"
+  },
+  "onboarding_title": {
+      "message": "测量开始",
+      "description": "The title for the onboarding page that opens when the user first uses Measure"
+  },
+  "onboarding_d1_paragraph": {
+      "message": "在此测试驱动器示例中开始使用测量",
+      "description": "A welcome message presented on the onboarding page, telling the user that they will be shown how to use Measure here"
+  },
+  "onboarding_d1_open": {
+      "message": "好，去吧",
+      "description": "Casually-phrased button text to open the onboarding page and test Measure"
+  },
+  "onboarding_d1_close": {
+      "message": "关",
+      "description": "More formally-written button text for the user to close the page, instead of testing the extension"
+  },
+  "onboarding_d2_step1": {
+      "message": "按工具栏中的测量扩展图标开始",
+      "description": "The first instruction shown to the user on how to use Measure, they're told to click the Measure icon in the toolbar where extensions are shown"
+  },
+  "onboarding_d2_step2": {
+      "message": "现在突出显示一行文字",
+      "description": "The second instruction shown to the user, letting them know they need to select a line of text in the article on the page"
+  },
+  "onboarding_d2_step3": {
+      "message": "全做完了。 那么容易呢？",
+      "description": "A success message saying that the user has now successfully used Measure"
+  },
+  "onboarding_d2_step3_button": {
+      "message": "走出去测量",
+      "description": "Button text letting the user know that they're done with this onboarding, and can go and use Measure elsewhere. This sentence works well in English where measure can be used as a verb and noun—this might need to be done differently in this language."
+  },
+  "onboarding_article": {
+      "message": "<p>掉啊，掉啊，掉啊！这一跤怎么一辈子摔不完了吗！她出声道，“我不晓得现在掉了几英里路嘞，我一定快近地心嘞。让我看：那是有四千英里深呢，我想有呢？”——你想这些事情是阿丽思从学堂里学着背的，现在可惜没有人在旁边听着夸她，都白说掉了，可是练练说说也好——“是啊，是差不多这么远——但是我的纬度是多少嘞？我的经度到了哪儿嘞？”（其实阿丽思一点也不懂得纬度是什么件东西，经度是怎么回事，但是她想那两个名词说在嘴里一定很好听的。</p><p>一会儿她又说话了。她道，“我倒不知道会不会—直掉穿了地球嘞，那怎么呢？掉到那边，遇见了许多倒着站的人，一定很好玩儿！叫倒猪世界，不是吗？”——她这回倒觉得幸亏没有人听着，因为她想不起来书里那个“倒足世界”的名字，又觉“倒猪世界”又不大象——“但是你想我不是得要问他们贵国的名字叫什么吗？泼里寺、麻达姆，①这是新西兰啊，还是澳大利亚啊？”（说着就一头向空中请安——你想想看，在半空中一头住下掉，—头又要请安，你能办得到吗？）“可是要这样问，他们一定把我当个傻孩子，连自己在什么国里都会不知道。不行，这个一定不好意思向人的；或者我会看见在哪儿墙上或是柱上写着：这是新西兰或者这是澳大利亚。”</p>",
+      "description": "An excerpt of Alice's Adventures in Wonderland, used as content for the onboarding page, for the user to test Measure on. Includes HTML tags to format in place."
+  }
+}

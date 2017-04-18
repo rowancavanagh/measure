@@ -5,7 +5,7 @@
   box-sizing: border-box;
   display: block;
   position: absolute;
-  min-width: 98px;
+  min-width: 80px;
   padding: 8px 14px 9px;
   background: linear-gradient(to bottom, #2f2f2f, #151515);
   border-radius: 4px;
