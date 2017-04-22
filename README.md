@@ -4,7 +4,7 @@ A Chrome extension measuring typographic line lengths right from the page. Measu
 
 ### [Available to download from the Chrome web store.](https://chrome.google.com/webstore/detail/measure/bbompmbliibpeaaloikpoahdokhjdmeg)
 
-<img src="/images%20for%20chrome%20web%20store/measure-video.gif" alt="Measure in action" width="400" height="300" />
+<img src="/images%20for%20chrome%20web%20store/en/measure-video.gif" alt="Measure in action" width="400" height="300" />
 
 The "measure" is the width of a body of type. This little tool helps you find it with a simple click in the toolbar and highlight of a line of text.
 
