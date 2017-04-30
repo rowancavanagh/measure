@@ -7,10 +7,16 @@ var onboarding = false;
 var tabId = "";
 var locale = chrome.i18n.getMessage("locale");
 
+var icon16 = "icons/" + locale + "/icon16.png";
+var icon32 = "icons/" + locale + "/icon32.png";
+var icon16c = "icons/" + locale + "/icon16c.png";
+var icon32c = "icons/" + locale + "/icon32c.png";
+chrome.browserAction.setIcon({path:{"16": icon16, "32": icon32}});
+
 chrome.browserAction.onClicked.addListener(function(tab) {
   toggle = !toggle;
   if(toggle){
-    chrome.browserAction.setIcon({path:{"16": "icons/icon16c.png", "19": "icons/icon19c.png", "32": "icons/icon32c.png", "38": "icons/icon38c.png"}});
+    chrome.browserAction.setIcon({path:{"16": icon16c, "32": icon32c}});
 
     if(onboarding){
       var windows = chrome.extension.getViews({type: "tab"});
@@ -46,7 +52,7 @@ chrome.browserAction.onClicked.addListener(function(tab) {
     });
   }
   else {
-    chrome.browserAction.setIcon({path:{"16": "icons/icon16.png", "19": "icons/icon19.png", "32": "icons/icon32.png", "38": "icons/icon38.png"}});
+    chrome.browserAction.setIcon({path:{"16": icon16, "32": icon32}});
     chrome.tabs.query({active: true, currentWindow: true}, function(tabs) {
       chrome.tabs.sendMessage(tabs[0].id, {"whatToDo": "off"});
     });
@@ -66,7 +72,7 @@ chrome.tabs.onZoomChange.addListener(function(){
 // On close
 chrome.tabs.onRemoved.addListener(function(){
   if(toggle){
-    chrome.browserAction.setIcon({path:{"16": "icons/icon16.png", "19": "icons/icon19.png", "32": "icons/icon32.png", "38": "icons/icon38.png"}});
+    chrome.browserAction.setIcon({path:{"16": icon16, "32": icon32}});
     tabId = "";
     toggle = false;
   };
@@ -79,7 +85,7 @@ chrome.tabs.onActivated.addListener(function(info){
     chrome.tabs.query({active: true, currentWindow: true}, function() {
       chrome.tabs.sendMessage(tabIdInt, {"whatToDo": "off"});
     });
-    chrome.browserAction.setIcon({path:{"16": "icons/icon16.png", "19": "icons/icon19.png", "32": "icons/icon32.png", "38": "icons/icon38.png"}});
+    chrome.browserAction.setIcon({path:{"16": icon16, "32": icon32}});
     tabId = "";
     toggle = false;
   };
@@ -88,7 +94,7 @@ chrome.tabs.onActivated.addListener(function(info){
 // On refresh
 chrome.tabs.onUpdated.addListener(function(){
   if(toggle){
-    chrome.browserAction.setIcon({path:{"16": "icons/icon16.png", "19": "icons/icon19.png", "32": "icons/icon32.png", "38": "icons/icon38.png"}});
+    chrome.browserAction.setIcon({path:{"16": icon16, "32": icon32}});
     tabId = "";
     toggle = false;
   };
@@ -97,7 +103,7 @@ chrome.tabs.onUpdated.addListener(function(){
 // On window change
 chrome.windows.onFocusChanged.addListener(function(){
   if(toggle){
-    chrome.browserAction.setIcon({path:{"16": "icons/icon16.png", "19": "icons/icon19.png", "32": "icons/icon32.png", "38": "icons/icon38.png"}});
+    chrome.browserAction.setIcon({path:{"16": icon16, "32": icon32}});
     tabId = "";
     toggle = false;
   };

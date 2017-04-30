@@ -3,6 +3,7 @@
 // Held together with string and paperclips.
 
 var prepare = true;
+var oneAndOnly = false;
 var competingTooltip = document.querySelector(".fb-quote, .highlightMenu, #highlight_create_popover"); // Tooltips from Facebook, The Guardian, Instapaper
 
 // Measuring
@@ -11,6 +12,7 @@ function measure() {
   var selection = str.toString();
   if (selection != "") {
     console.log('Measure!');
+    oneAndOnly = true;
     measureCounterCount.innerHTML = selection.length;
     if (selection.length == 1) {
       measureCounterTitle.innerHTML = chrome.i18n.getMessage("character");
@@ -80,7 +82,7 @@ if (prepare == true) {
   chrome.runtime.onMessage.addListener(function(message){
     var whatToDo = message.whatToDo;
 
-    if (whatToDo == "off") {
+    if (whatToDo == "off" && oneAndOnly) {
       console.log("Measure is off");
       document.removeEventListener('mouseup', measure, false);
       document.removeEventListener('keyup', measure, false);
@@ -89,6 +91,7 @@ if (prepare == true) {
       if (yn !== null) {
         measureCounter.parentNode.removeChild(measureCounter);
       };
+      oneAndOnly = false;
     }
     else if (whatToDo == "measure") {
       measure();

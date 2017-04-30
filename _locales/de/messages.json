@@ -5,16 +5,17 @@
   },
   "name": {
       "message": "Satzbreite",
-      "description": "Equivalent word of measure/line length in German"
+      "description": "Equivalent word of measure/line length in German. 'Measure' being a typographic term and this extension's name in English"
   },
   "description": {
-      "message": "Measure typographic line lengths right from the page"
+      "message": "Messen Sie typografische Zeilenlängen direkt von der Seite aus",
+      "description": "This sentence works well in English where measure can be used as a verb and noun—this might need to be done differently in this language. 'Line lengths' might need to say 'zeilenlänge' and not use satzbreite?"
   },
   "description_screenshot2": {
-      "message": "Design more readable content"
+      "message": "Design lesbaren Inhalt"
   },
   "description_screenshot3": {
-      "message": "Learn from the best"
+      "message": "Lerne von den Besten"
   },
   "characters": {
       "message": "Zeichen",
@@ -22,38 +23,38 @@
   },
   "character": {
       "message": "Zeichen",
-      "description": "The same label as above, as plural in some languages"
+      "description": "The same label as above, as singular form. Unsure if there's a different word in German?"
   },
   "onboarding_title": {
       "message": "Satzbreite—Sich aufmachen",
       "description": "The title for the onboarding page that opens when the user first uses Measure"
   },
   "onboarding_d1_paragraph": {
-      "message": "Get started with Measure in this test drive example",
+      "message": "Beginnen Sie mit Satzbreite in diesem Beispiel",
       "description": "A welcome message presented on the onboarding page, telling the user that they will be shown how to use Measure here"
   },
   "onboarding_d1_open": {
-      "message": "Yes, test away!",
+      "message": "Ja, fahre fort!",
       "description": "Casually-phrased button text to open the onboarding page and test Measure"
   },
   "onboarding_d1_close": {
-      "message": "Close",
+      "message": "Zumachen",
       "description": "More formally-written button text for the user to close the page, instead of testing the extension"
   },
   "onboarding_d2_step1": {
-      "message": "Press the Measure extension icon in the toolbar to begin",
+      "message": "Drücken Sie die Satzbreite erweiterung in der Symbolleiste, um zu beginnen",
       "description": "The first instruction shown to the user on how to use Measure, they're told to click the Measure icon in the toolbar where extensions are shown"
   },
   "onboarding_d2_step2": {
-      "message": "Now highlight a line of text",
+      "message": "Auswählen Sie nun eine Textzeile aus",
       "description": "The second instruction shown to the user, letting them know they need to select a line of text in the article on the page"
   },
   "onboarding_d2_step3": {
-      "message": "All done. How easy was that?",
+      "message": "Erledigt. Das war einfach.",
       "description": "A success message saying that the user has now successfully used Measure"
   },
   "onboarding_d2_step3_button": {
-      "message": "Go forth and Measure",
+      "message": "Vorgehen und messen",
       "description": "Button text letting the user know that they're done with this onboarding, and can go and use Measure elsewhere. This sentence works well in English where measure can be used as a verb and noun—this might need to be done differently in this language."
   },
   "onboarding_article": {

@@ -10,6 +10,7 @@
   background: linear-gradient(to bottom, #2f2f2f, #151515);
   border-radius: 4px;
   font: 18px 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  letter-spacing: 0;
   color: white;
   margin-top: 8px;
   opacity: 0;

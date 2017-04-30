@@ -1,0 +1,64 @@
+{
+  "locale": {
+      "message": "fr",
+      "description": "The locale this file is targeting"
+  },
+  "name": {
+      "message": "Longueur de la Ligne",
+      "description": "Equivalent word of measure/line length in French. 'Measure' being a typographic term and this extension's name in English"
+  },
+  "description": {
+      "message": "Mesurer les longueurs de lignes typographiques directement depuis la page",
+      "description": "This sentence works well in English where measure can be used as a verb and noun—this might need to be done differently in this language"
+  },
+  "description_screenshot2": {
+      "message": "Design more readable content"
+  },
+  "description_screenshot3": {
+      "message": "Learn from the best"
+  },
+  "characters": {
+      "message": "Caractères",
+      "description": "A label underneath a numeric character count, telling the user how many characters (letters, numbers and symbols) have been selected"
+  },
+  "character": {
+      "message": "Caractère",
+      "description": "The same label as above, but in singular form"
+  },
+  "onboarding_title": {
+      "message": "Longueur de la Ligne—Commencer",
+      "description": "The title for the onboarding page that opens when the user first uses Measure"
+  },
+  "onboarding_d1_paragraph": {
+      "message": "Get started with Measure in this test drive example",
+      "description": "A welcome message presented on the onboarding page, telling the user that they will be shown how to use Measure here"
+  },
+  "onboarding_d1_open": {
+      "message": "Yes, test away!",
+      "description": "Casually-phrased button text to open the onboarding page and test Measure"
+  },
+  "onboarding_d1_close": {
+      "message": "Close",
+      "description": "More formally-written button text for the user to close the page, instead of testing the extension"
+  },
+  "onboarding_d2_step1": {
+      "message": "Press the Measure extension icon in the toolbar to begin",
+      "description": "The first instruction shown to the user on how to use Measure, they're told to click the Measure icon in the toolbar where extensions are shown"
+  },
+  "onboarding_d2_step2": {
+      "message": "Now highlight a line of text",
+      "description": "The second instruction shown to the user, letting them know they need to select a line of text in the article on the page"
+  },
+  "onboarding_d2_step3": {
+      "message": "All done. How easy was that?",
+      "description": "A success message saying that the user has now successfully used Measure"
+  },
+  "onboarding_d2_step3_button": {
+      "message": "Go forth and Measure",
+      "description": "Button text letting the user know that they're done with this onboarding, and can go and use Measure elsewhere. This sentence works well in English where measure can be used as a verb and noun—this might need to be done differently in this language."
+  },
+  "onboarding_article": {
+      "message": "<p>Tombe, tombe, tombe! «Cette chute n’en finira donc pas! Je suis curieuse de savoir combien de milles j’ai déjà faits,» dit-elle tout haut. «Je dois être bien près du centre de la terre. Voyons donc, cela serait à quatre mille milles de profondeur, il me semble.» (Comme vous voyez, Alice avait appris pas mal de choses dans ses leçons; et bien que ce ne fût pas là une très-bonne occasion de faire parade de son savoir, vu qu’il n’y avait point d’auditeur, cependant c’était un bon exercice que de répéter sa leçon.) «Oui, c’est bien à peu près cela; mais alors à quel degré de latitude ou de longitude est-ce que je me trouve?» (Alice n’avait pas la moindre idée de ce que voulait dire latitude ou longitude, mais ces grands mots lui paraissaient beaux et sonores.)</p><p>Bientôt elle reprit: «Si j’allais traverser complétement la terre? Comme ça serait drôle de se trouver au milieu de gens qui marchent la tête en bas. Aux Antipathies, je crois.» (Elle n’était pas fâchée cette fois qu’il n’y eût personne là pour l’entendre, car ce mot ne lui faisait pas l’effet d’être bien juste.) «Eh mais, j’aurai à leur demander le nom du pays. — Pardon, Madame, est-ce ici la Nouvelle-Zemble ou l’Australie?» — En même temps elle essaya de faire la révérence. (Quelle idée! Faire la révérence en l’air! Dites-moi un peu, comment vous y prendriez-vous?) «Quelle petite ignorante! Pensera la dame quand je lui ferai cette question. Non, il ne faut pas demander cela; peut-être le verrai-je écrit quelque part.»</p>",
+      "description": "An excerpt of Alice's Adventures in Wonderland, used as content for the onboarding page, for the user to test Measure on. Includes HTML tags to format in place."
+  }
+}
