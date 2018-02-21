@@ -50,7 +50,7 @@ dialog {
   max-width: 500px;
   transform: translateX(-50%) translateY(-52%);
   animation-name: dialog-one-in;
-  animation-duration: .6s;
+  animation-duration: .5s;
   animation-timing-function: ease-in;
 }
 
@@ -155,7 +155,7 @@ dialog a.close {
   width: 100%;
   min-height: 100%;
   animation-name: section-in;
-  animation-duration: 1s;
+  animation-duration: .8s;
   animation-timing-function: ease-in;
 }
 
@@ -188,7 +188,7 @@ figure {
   background-repeat: no-repeat;
   background-blend-mode: multiply;
   animation-name: figure-in;
-  animation-duration: 5s;
+  animation-duration: 4s;
   animation-timing-function: ease-out;
 }
 
@@ -198,7 +198,7 @@ figure {
 @keyframes dialog-one-in {
   0% {
     opacity: 0;
-    transform: translate(-50%, -58%);
+    transform: translate(-50%, -56%);
   }
   100% {
     opacity: 1;

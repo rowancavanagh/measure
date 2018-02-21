@@ -7,6 +7,6 @@ body {
 }
 
 article {
-  font-family: Georgia, "Times New Roman", STFangSong, "华文仿宋", STSong, "华文宋体", FangSong, "仿宋", serif;
-  line-height: 1.8em;
+  font-family: Georgia, "Times New Roman", STKaiti, "华文楷体", KaiTi, "楷体", STSong, "华文宋体", FangSong, "仿宋", serif;
+  line-height: 1.5em;
 }
